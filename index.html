@@ -6,9 +6,20 @@
   </head>
   <body>
     <h1>Video Infos</h1>
-    <div class="">
-      <label for="video">Select a video</label>
-      <input type="file" name="video" accept="video/*" value="">
-    </div>
+    <form>
+      <div class="">
+        <label for="video">Select a video</label>
+        <input type="file" name="video" accept="video/*" />
+      </div>
+      <button type="submit" name="button">Get Infos</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", event => {
+        event.preventDefault();
+        const file = document.querySelector("form").files[0];
+        
+      });
+    </script>
   </body>
 </html>
